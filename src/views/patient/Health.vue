@@ -65,9 +65,9 @@
 
 <script setup>
 const articles = [
-  { title: '春季养生：这5种食物要多吃', img: '/images/health-article1.png', likes: 128 },
-  { title: '高血压患者日常注意事项', img: '/images/health-article2.png', likes: 256 },
-  { title: '糖尿病饮食管理全攻略', img: '/images/health-article3.png', likes: 89 },
+  { title: '如何预防中耳炎', img: '/images/health-article1.png', likes: 128 },
+  { title: '鼻炎的日常护理', img: '/images/health-article2.png', likes: 256 },
+  { title: '保护听力的5个习惯', img: '/images/health-article3.png', likes: 89 },
 ]
 </script>
 

@@ -179,8 +179,6 @@ const tabs = computed(() => {
         { name: '挂号记录', bg, svg: iconRegRecord(t) },
         { name: '医保定点', bg, svg: iconInsurance(t) },
         { name: '检查检验开单', bg, svg: iconLabOrder(t) },
-        { name: '生殖胚胎续费', bg, svg: iconEmbryoFee(t) },
-        { name: '产科建档', bg, svg: iconMaternity(t) },
         { name: '体检预约', bg, svg: iconPhysical(t) },
         { name: '石蜡切片申请', bg, svg: iconSlice(t) },
         { name: '病理会诊', bg, svg: iconPathology(t) },
@@ -199,7 +197,6 @@ const tabs = computed(() => {
       name: '综合',
       items: [
         { name: '体检预约', bg, svg: iconPhysical(t) },
-        { name: '产科建档', bg, svg: iconMaternity(t) },
         { name: '石蜡切片申请', bg, svg: iconSlice(t) },
         { name: '病理会诊', bg, svg: iconPathology(t) },
       ]

@@ -98,7 +98,6 @@ const clinicItems = computed(() => {
     { name: '检查检验', badge: 0, bg, svg: iconDrLab(t) },
     { name: '退费申请', badge: 0, bg, svg: iconDrRefund(t) },
     { name: '病历申请', badge: 0, bg, svg: iconDrRecord(t) },
-    { name: '产前诊断', badge: 0, bg, svg: iconDrPrenatal(t) },
   ]
 })
 
