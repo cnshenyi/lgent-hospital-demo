@@ -82,6 +82,11 @@ export function iconPathology(theme) {
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="${c.bg}"/><circle cx="20" cy="18" r="6" fill="${c.p}"/><circle cx="32" cy="18" r="6" fill="${c.p}" opacity=".6"/><ellipse cx="24" cy="34" rx="12" ry="6" fill="${c.p}" opacity=".5"/><circle cx="20" cy="18" r="3" fill="white" opacity=".4"/></svg>`
 }
 
+export function iconVertigo(theme) {
+  const c = themeColors(theme)
+  return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="${c.bg}"/><circle cx="24" cy="20" r="6" fill="${c.p}"/><ellipse cx="24" cy="32" rx="8" ry="4" fill="${c.p}" opacity=".5"/><circle cx="24" cy="20" r="10" fill="none" stroke="${c.p}" stroke-width="1.5" opacity=".3"/><circle cx="24" cy="20" r="14" fill="none" stroke="${c.p}" stroke-width="1.2" opacity=".2"/><path d="M20 18l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+}
+
 // ============ PATIENT HOME — Hospital Category (住院) ============
 
 export function iconHospitalPay(theme) {

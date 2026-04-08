@@ -27,7 +27,7 @@
         <div class="nav-row">
           <img src="/emblem.png" class="hospital-logo" alt="logo" />
           <div class="app-title-capsule">
-            <span class="title-main">龙岗耳鼻喉</span>
+            <span class="title-main">深圳市龙岗区耳鼻咽喉医院</span>
           </div>
           <div class="wechat-capsule">
             <span class="cap-dots">···</span>
@@ -106,7 +106,7 @@
         <span v-for="(t, i) in tabs" :key="t.name" class="stab" :class="{ active: activeTab === i }" @click="activeTab = i">{{ t.name }}</span>
       </div>
       <div class="section-grid">
-        <div class="sgrid-item" v-for="item in tabs[activeTab].items" :key="item.name">
+        <div class="sgrid-item" v-for="item in tabs[activeTab].items" :key="item.name" @click="handleItemClick(item)">
           <div class="sgrid-icon">
             <div v-html="item.svg"></div>
           </div>
@@ -134,16 +134,18 @@
 </template>
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 import {
   themeColors,
   iconCheckin, iconPayment, iconReport, iconCalendar,
   iconAppointment, iconOnlineClinic,
   iconRegRecord, iconInsurance, iconLabOrder, iconEmbryoFee,
-  iconMaternity, iconPhysical, iconSlice, iconPathology,
+  iconMaternity, iconPhysical, iconSlice, iconPathology, iconVertigo,
   iconHospitalPay, iconHospitalList, iconDischarge, iconDailyList
 } from '../../utils/icons.js'
 
 const props = defineProps({ theme: { type: String, default: 'A' }, side: String })
+const router = useRouter()
 
 const bannerIdx = ref(0)
 let timer = null
@@ -199,10 +201,17 @@ const tabs = computed(() => {
         { name: '体检预约', bg, svg: iconPhysical(t) },
         { name: '石蜡切片申请', bg, svg: iconSlice(t) },
         { name: '病理会诊', bg, svg: iconPathology(t) },
+        { name: '眩晕管理', bg, svg: iconVertigo(t), route: '/patient/vertigo' },
       ]
     }
   ]
 })
+
+const handleItemClick = (item) => {
+  if (item.route) {
+    router.push(item.route)
+  }
+}
 
 onMounted(() => {
   timer = setInterval(() => {

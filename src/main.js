@@ -8,6 +8,7 @@ import PatientHome from './views/patient/Home.vue'
 import PatientHealth from './views/patient/Health.vue'
 import PatientMessage from './views/patient/Message.vue'
 import PatientMy from './views/patient/My.vue'
+import VertigoProjects from './views/patient/VertigoProjects.vue'
 
 // Doctor views
 import DoctorWorkstation from './views/doctor/Workstation.vue'
@@ -21,6 +22,7 @@ const routes = [
   { path: '/patient/health', component: PatientHealth },
   { path: '/patient/message', component: PatientMessage },
   { path: '/patient/my', component: PatientMy },
+  { path: '/patient/vertigo', component: VertigoProjects },
   { path: '/doctor/workstation', component: DoctorWorkstation },
   { path: '/doctor/patients', component: DoctorPatients },
   { path: '/doctor/message', component: DoctorMessage },
